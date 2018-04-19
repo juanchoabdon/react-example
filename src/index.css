@@ -1,0 +1,84 @@
+li {
+  list-style: none;
+}
+
+.loading {
+  height: 100vh;
+}
+
+.error {
+  color: #F66363;
+}
+
+.success {
+  color: #43BB4F;
+}
+
+button.disabled , a.disabled { 
+  pointer-events: none; 
+}
+
+header {
+  padding: 150px 0 10px !important;
+}
+
+.nav-link {
+  cursor: pointer !important;
+}
+
+.Admin {
+  background-color: #f8f8f8;
+  height: 100vh;
+}
+
+/* footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
+
+.main-content {
+  padding-bottom: 5%;
+}
+
+.shop-item.create {
+  border: 3px dotted #ebebeb;
+  padding-top: 44px;
+}
+
+.shop-item.create .action h4 {
+  font-size: 18px;
+  color: #8E8E8E
+}
+
+.shop-item {
+  height: 121px;
+  padding-top: 40px;
+  text-align: center
+}
+
+.nav-outline .nav-link:hover, .nav-outline .nav-link.active {
+  background: white;
+  color: rgb(67, 155, 233);
+}
+
+.nav-outline .nav-link {
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 4px 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.nav-link i {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+.team-2 .pm {
+  color: rgb(67, 155, 233);
+  text-transform: capitalize;
+}
