@@ -23,26 +23,31 @@ const customer = {
             logged: false
         })
 
+
     },
 
     async get() { 
-        const token = localStorage.getItem('bitgetToken');
+        // const token = localStorage.getItem('bitgetToken');
 
-        if (!token) {
-            store.dispatch({
-                type: 'SET_LOGGED_CUSTOMER',
-                logged: false
-            }) 
-            return;
-        }
+        // if (!token) {
+        //     store.dispatch({
+        //         type: 'SET_LOGGED_CUSTOMER',
+        //         logged: false
+        //     }) 
+        //     return;
+        // }
 
-        let response = await fetch(`${API_SERVER}`, { headers: headers.auth() } );
-        response = await response.json()
+        // let response = await fetch(`${API_SERVER}`, { headers: headers.auth() } );
+        // response = await response.json()
 
         store.dispatch({
             type: 'SET_LOGGED_CUSTOMER',
-            logged: response.success,
-            customer: response.data
+            logged: true,
+            customer: {
+                first_name: 'Test',
+                last_name: 'User',
+                email: 'ex@ex.com',
+            }
         })
                         
     },

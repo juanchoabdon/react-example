@@ -39,15 +39,8 @@ class ListProjects extends Component {
                 
                             <div className="row gap-y">
                                 
-                                <div className="col-12 col-md-6 col-xl-6">
-                                    <Link className="shop-item create card-shadowed card-hover-shadow" to={`${match.path}/create`}>
-                                        <div className="text-center action">
-                                            <h4> + Crear nuevo proyecto </h4>
-                                        </div>
-                                    </Link>
-                                </div>
-                        
-                                {   this.state.projects.map((project, index) => ( 
+                         
+                                {/* {   this.state.projects.map((project, index) => ( 
                                             <div key={index} className="col-12 col-md-6 col-xl-6 animated fadeIn">
                                                 <Link className="shop-item card-shadowed card-hover-shadow" to={`${match.path}/${project.id}`}>
                                                     <div className="text-center">
@@ -57,7 +50,7 @@ class ListProjects extends Component {
                                             </div>
                                         ) 
                                     )
-                                }
+                                } */}
                         
                     
                             </div>

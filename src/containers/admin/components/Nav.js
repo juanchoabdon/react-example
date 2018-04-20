@@ -14,16 +14,15 @@ const Nav = ( {match} ) =>  {
 
                     <div className="topbar-left">
                         <button className="topbar-toggler">&#9776;</button>
-                        <Link to="/admin" className="topbar-brand">
-                            <img className="logo-default" src="/assets/img/logo-bitget-black.png" alt="logo"/>
-                            <img className="logo-inverse" src="/assets/img/bitget-logo.png" alt="logo"/>
+                        <Link to="/admin" className="topbar-brand" style={{ color: 'white' }}>
+                              <h4> Logo </h4>
                         </Link>
                     </div>
 
                     <div className="topbar-right">
                         <ul className="topbar-nav nav">
                             <li className="nav-item">
-                                <NavLink to={`${match.path}/projects`} exact className="nav-link" activeClassName='active'>Example</NavLink>
+                                <NavLink to={`${match.path}/projects`} exact className="nav-link" activeClassName='active'>Profiles</NavLink>
                             </li>
                             {/* <li className="nav-item">
                                 <NavLink to={`${match.path}/projects/create`}  activeClassName='active' className="nav-link">Crear Proyecto</NavLink>

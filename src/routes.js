@@ -20,6 +20,7 @@ const MainRoutes = () =>  {
                     <AppRoute path="/" exact component={Home} />
                     <AppRoute path="/login" exact component={Login} />
                     <AppRoute path="/signup" exact component={Signup} />
+                     {/* We put auth="true" for this route to be restricted just people who are logged in */}
                     <AppRoute auth="true" path="/admin" component={Admin} />
                     <Route path="/404" component={NotFound} />      
                     <Route path="/403" component={NotAuth} />   

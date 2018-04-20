@@ -6,20 +6,20 @@ const Nav = ({match}) => (
           <ul className="nav nav-vertical">
             <li className="nav-item">
               <NavLink to={`${match.path}/`} exact activeClassName='active' className="nav-link">
-                <h6>Perfil</h6>
-                <p>Visualiza y modifica tu información</p>
+                <h6>My profile</h6>
+                <p>Text</p>
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink to={`${match.path}/team`}  activeClassName='active' className="nav-link">
-                <h6>Tu equipo</h6>
-                <p>Vizualiza y modifica tus colaboradores</p>
+                <h6>Information</h6>
+                <p>Text</p>
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink  to={`${match.path}/security`}  activeClassName='active' className="nav-link">
-                <h6>Seguridad</h6>
-                <p>Modifica tus credenciales</p>
+                <h6>Security</h6>
+                <p>Trxt</p>
               </NavLink>
             </li>
             {/* <li className="nav-item">

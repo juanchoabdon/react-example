@@ -22,26 +22,37 @@ class Login extends Component {
 
 
     async doCustomerLogin(e) {
-        e.preventDefault();
-        const { email, password } = this.state;
         const { history } = this.props;        
-        this.setState( { loading: true, error: '' } );
-        const response = await customer.login(email.trim(), password);
+        e.preventDefault();
+        //Here we do the logic of the login
+        // const { email, password } = this.state;
+        // this.setState( { loading: true, error: '' } );
+        // const response = await customer.login(email.trim(), password);
 
-        if (!response.success) {
-            localStorage.removeItem('bitgetToken');
-            this.setState({
-                    error: response.message_error,
-                    loading: false
-            });
-            return;
-        }
+        // if (!response.success) {
+        //     localStorage.removeItem('bitgetToken');
+        //     this.setState({
+        //             error: response.message_error,
+        //             loading: false
+        //     });
+        //     return;
+        // }
 
-        localStorage.setItem('bitgetToken', response.data.token);
+        // localStorage.setItem('bitgetToken', response.data.token);
+        // store.dispatch({
+        //     type: 'SET_LOGGED_CUSTOMER',
+        //     logged: response.success,
+        //     customer: response.data
+        // })
+
         store.dispatch({
             type: 'SET_LOGGED_CUSTOMER',
-            logged: response.success,
-            customer: response.data
+            logged: true,
+            customer: {
+                first_name: 'Test',
+                last_name: 'User',
+                email: 'ex@ex.com',
+            }
         })
         history.push('/admin');
     }
@@ -72,7 +83,13 @@ class Login extends Component {
                                     this.setState({ password: e.target.value })
                                 }}/>
                             </div>
-
+                            <div className="form-group">
+                                 <button className={"btn btn-bold btn-block btn-success " +
+                                  (this.state.loading  ? 'disabled' : '')   }  
+                                    type="submit">
+                                    Login
+                                 </button>
+                            </div>
                         </form>
                     </div>       
             </div>

@@ -11,7 +11,7 @@ import Settings from './settings/Settings';
 const Account = ({ match }) => { 
     return(
         <div>
-            <Header title="Tu Cuenta"/>
+            <Header title="My account"/>
             <section className="section bg-gray" id="section-vtab">
                 <div className="container">
                     <div className="row gap-5">
