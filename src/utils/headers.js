@@ -8,7 +8,7 @@ const headers = {
     },
 
     auth() {
-        const token = localStorage.getItem('bitgetToken');
+        const token = localStorage.getItem('snovianToken');
         const headers = {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`

@@ -1,4 +1,4 @@
-# React Modern web application example
+# REACT EXAMPLE APP
 
 This project use React in the core and was created with create-react-app package, this is just the client , it's not using any backend technology.
 Works just with Javascript and make request to an URL(API) for retriving and sending data.

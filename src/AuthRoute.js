@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Loading from 'containers/loading/Loading';
 import customer from 'api/customer';
 
-class AppRoute extends React.Component {
+class AuthRoute extends React.Component {
 
 	async componentWillMount() {
 		await customer.get();
@@ -23,7 +23,7 @@ class AppRoute extends React.Component {
 						: <Redirect to="/" />
 				}
 				return logged
-						? <Redirect to="/admin" />
+						? <Redirect to="/app" />
 						: <Component {...props} />
 
 			}} />
@@ -38,4 +38,4 @@ const stateToProps = ({ loggedCustomerState }) => ({
 	customer: loggedCustomerState.customer
 });
 
-export default connect(stateToProps)(AppRoute);
+export default connect(stateToProps)(AuthRoute);

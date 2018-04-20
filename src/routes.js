@@ -8,8 +8,8 @@ import Login from 'containers/login/Login';
 import Signup from 'containers/signup/Signup';
 import NotFound from 'containers/not-found/NotFound';
 import NotAuth from 'containers/not-auth/NotAuth'
-import Admin from 'containers/admin/Admin';
-import AppRoute from 'AppRoute';
+import App from 'containers/app/App';
+import AuthRoute from 'AuthRoute';
 
 const MainRoutes = () =>  {    
 
@@ -17,11 +17,11 @@ const MainRoutes = () =>  {
         <Provider store={store}>
             <BrowserRouter>
                 <Switch>
-                    <AppRoute path="/" exact component={Home} />
-                    <AppRoute path="/login" exact component={Login} />
-                    <AppRoute path="/signup" exact component={Signup} />
+                    <AuthRoute path="/" exact component={Home} />
+                    <AuthRoute path="/login" exact component={Login} />
+                    <AuthRoute path="/signup" exact component={Signup} />
                      {/* We put auth="true" for this route to be restricted just people who are logged in */}
-                    <AppRoute auth="true" path="/admin" component={Admin} />
+                    <AuthRoute auth="true" path="/app" component={App} />
                     <Route path="/404" component={NotFound} />      
                     <Route path="/403" component={NotAuth} />   
                     <Redirect path="*" to="/404" /> 

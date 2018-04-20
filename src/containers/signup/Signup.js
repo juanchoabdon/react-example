@@ -2,12 +2,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import store from 'store';
-import firebaseUtil from 'utils/firebase';
 import customer from 'api/customer';
 import project from 'api/project';
 
 
-declare var thesaas;
 class Signup extends Component {
     
     constructor(props) {
@@ -25,11 +23,6 @@ class Signup extends Component {
         this.createCustomer = this.createCustomer.bind(this);
     }
 
-
-    componentDidMount() {
-        thesaas.constellation();
-    }
-
     async createCustomer(e) {
         e.preventDefault();
         const { history } = this.props;        
@@ -37,7 +30,7 @@ class Signup extends Component {
         const response = await customer.create(this.state);
 
         if (!response.success) {
-            localStorage.removeItem('bitgetToken');
+            localStorage.removeItem('snovianToken');
             this.setState({
                     error: response.message_error,
                     loading: false
@@ -45,15 +38,14 @@ class Signup extends Component {
             return;
         }
 
-        localStorage.setItem('bitgetToken', response.data.token);
+        localStorage.setItem('snovianToken', response.data.token);
 
-        const { data } = await project.add(this.state.project)
         store.dispatch({
             type: 'SET_LOGGED_CUSTOMER',
             logged: response.success,
             customer: response.data
         })
-        history.push(`/admin/projects/${data.project_id}`);
+        history.push(`/app`);
     }
         
     
@@ -62,7 +54,7 @@ class Signup extends Component {
         return (
                 <div className="SingupBox mh-fullscreen bg-img center-vh p-20"  style={{ 'backgroundImage': 'linear-gradient(to top, #5BABE0 0%, #5BABE0 1%, #439BE9 100%)' }}>
                     <div className="card card-shadowed p-50 w-600 mb-0 animated fadeIn" style={{maxWidth: '100%'}}>  
-                        <h5 className="text-uppercase text-center">Register</h5>
+                        <h5 className="text-uppercase text-center">Signup</h5>
                         <br/><br/>
                         <div className="text-center error"> 
                             <p> {this.state.error} </p>
@@ -114,7 +106,7 @@ class Signup extends Component {
                                     <br/>
                                     <button className={"btn btn-bold btn-block btn-success " + 
                                     (this.state.loading  ? 'disabled' : '')}  type="submit">
-                                        Empezar
+                                        Signup
                                     </button> 
                                 </div>
                           

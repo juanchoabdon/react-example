@@ -30,7 +30,7 @@ class Login extends Component {
         // const response = await customer.login(email.trim(), password);
 
         // if (!response.success) {
-        //     localStorage.removeItem('bitgetToken');
+        //     localStorage.removeItem('snovianToken');
         //     this.setState({
         //             error: response.message_error,
         //             loading: false
@@ -38,7 +38,7 @@ class Login extends Component {
         //     return;
         // }
 
-        // localStorage.setItem('bitgetToken', response.data.token);
+        // localStorage.setItem('snovianToken', response.data.token);
         // store.dispatch({
         //     type: 'SET_LOGGED_CUSTOMER',
         //     logged: response.success,
@@ -54,7 +54,7 @@ class Login extends Component {
                 email: 'ex@ex.com',
             }
         })
-        history.push('/admin');
+        history.push('/app');
     }
         
     

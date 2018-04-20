@@ -1,11 +1,10 @@
 import React from 'react';
 import { Route, Switch} from 'react-router-dom';
-import Header from 'containers/admin/components/Header';
+import Header from 'containers/app/components/Header';
 import Nav from './components/Nav';
 
 import Profile from './profile/Profile';
 import Security from './security/Security';
-import Team from './team/Team';
 import Settings from './settings/Settings';
 
 const Account = ({ match }) => { 
@@ -22,7 +21,6 @@ const Account = ({ match }) => {
                             <Switch>
                                 <Route path={`${match.path}`} exact component={Profile} />
                                 <Route path={`${match.path}/security`} component={Security} />
-                                <Route path={`${match.path}/team`} component={Team} />
                                 <Route path={`${match.path}/settings`} component={Settings} />
                             </Switch>
                         </div> 

@@ -17,7 +17,7 @@ const customer = {
 
     logout() {
 
-        localStorage.removeItem('bitgetToken');
+        localStorage.removeItem('snovianToken');
         store.dispatch({
             type: 'SET_LOGGED_CUSTOMER',
             logged: false
@@ -27,7 +27,7 @@ const customer = {
     },
 
     async get() { 
-        // const token = localStorage.getItem('bitgetToken');
+        // const token = localStorage.getItem('snovianToken');
 
         // if (!token) {
         //     store.dispatch({

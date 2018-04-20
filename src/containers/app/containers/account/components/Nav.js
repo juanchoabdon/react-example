@@ -11,8 +11,8 @@ const Nav = ({match}) => (
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={`${match.path}/team`}  activeClassName='active' className="nav-link">
-                <h6>Information</h6>
+              <NavLink to={`${match.path}/settings`}  activeClassName='active' className="nav-link">
+                <h6>Settings</h6>
                 <p>Text</p>
               </NavLink>
             </li>
